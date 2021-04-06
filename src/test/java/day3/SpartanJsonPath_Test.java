@@ -113,18 +113,62 @@ public class SpartanJsonPath_Test extends SpartanNoAuth_BaseTest {
                         when()
                 .get("/spartans/search")
                 .prettyPeek().jsonPath();
-    // storing some Data into Map
-      Map<String,Object> listOfData = jp.getMap("content[3]");
+        // storing some Data into Map
+        Map<String, Object> listOfData = jp.getMap("content[3]");
         System.out.println("listOfData = " + listOfData);
         System.out.println("Name of object number 3 = " + listOfData.get("name"));
         System.out.println("Phone number of object number 3 = " + listOfData.get("phone"));
 
         // now im getting specific Name from  whole data providint index number
         System.out.println("Name of 3rd Object = " + jp.get("content[3].name"));
-        System.out.println("phone number of object number 8 = " + jp.get("content[9].phone") );
+        System.out.println("phone number of object number 8 = " + jp.get("content[9].phone"));
         System.out.println("Name of object number 8 = " + jp.get("content[9].name"));
+    }
 
+    @DisplayName("Saving json array fields into List")
+    @Test
+    public void testSavingJsonArrayIntoList() {
+
+        JsonPath jp = given()
+                .queryParam("nameContains", "t")
+                .queryParam("gender", "Female")
+                .log().all().
+                        when()
+                .get("/spartans/search")
+                .prettyPeek().jsonPath();
+
+        // save all the id into a LIST
+        System.out.println("List of all ID  = " + jp.getList("content.id"));
+        System.out.println("List of all names = " + jp.getList("content.name"));
+        System.out.println("List of all ph numbers  = " + jp.getList("content.phone"));
+        System.out.println("List of all genders = " + jp.getList("content.gender"));
+
+
+        List<String> listOfNames = jp.getList("content.name");
+        List<Integer> listOfAlId = jp.getList("content.id", Integer.class);
+        List<Long> listOfPhone = jp.getList("content.phone", Long.class);
 
 
     }
+
+
+    @DisplayName("Get List of spartans practiceGET/ spartans")
+    @Test
+    public void testGetListOfSpartans() {
+
+        JsonPath jp = get("/spartans").jsonPath(); // return TYPE JsonPath obj
+        // save the List into List obj and assert the size
+
+        List<Integer> allId = jp.getList("id", Integer.class);
+        assertThat(allId, hasSize(127));
+        List<String> allNames = jp.getList("names",String.class);
+        assertThat(allNames, hasSize(127));
+        List<Long> allPhone = jp.getList("phone",Long.class);
+        assertThat(allPhone, hasSize(127));
+
+    }
+
+
+
+
 }
