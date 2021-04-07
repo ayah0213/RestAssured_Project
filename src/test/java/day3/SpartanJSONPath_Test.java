@@ -15,7 +15,7 @@ import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.* ;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class SpartanJsonPath_Test extends SpartanNoAuth_BaseTest {
+public class SpartanJSONPath_Test extends SpartanNoAuth_BaseTest {
 
     // http://3.92.215.98:8000/api/spartans/16
 

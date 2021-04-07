@@ -21,12 +21,12 @@ import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.* ;
 import static org.hamcrest.MatcherAssert.assertThat;
 @DisplayName("Testing adding data to PSartan app multiple way")
-public class PostingData extends SpartanNoAuth_BaseTest{
+public class POSTData extends SpartanNoAuth_BaseTest{
 
   @DisplayName("POST/ spartans with String Body")
   @Test
   public void testPostsDataWithStringBody(){
-      // we gonna  send POST, send-create new SPartan
+      // we gonna  send POST, send-create new Spartan
       /*
            {
     "name" : "Mikail",

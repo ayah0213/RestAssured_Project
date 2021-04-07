@@ -17,7 +17,7 @@ import static org.hamcrest.Matchers.* ;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 
-public class SpartanUpdatingData extends SpartanNoAuth_BaseTest {
+public class SpartanPOSTUpdatingData extends SpartanNoAuth_BaseTest {
 
 // you may repeated evevrything we did previously in post Test for providing Body
     // we will just look at Map and POJO
