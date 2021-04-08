@@ -35,13 +35,13 @@ public static  String token;
 //    }
 
 
-    public static String myToken ;
+    public static String librarianToken;
 
     @BeforeAll
     public static void init(){
         baseURI  = "http://library1.cybertekschool.com" ;
         basePath = "/rest/v1" ;
-        myToken  = getToken(ConfigurationReader.getProperty("lib1user"), ConfigurationReader.getProperty("lib1pasw"));
+        librarianToken = getToken(ConfigurationReader.getProperty("lib1user"), ConfigurationReader.getProperty("lib1pasw"));
 
     }
     public static String getToken(String username, String password){
