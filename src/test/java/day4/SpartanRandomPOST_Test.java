@@ -160,7 +160,7 @@ public class SpartanRandomPOST_Test extends SpartanNoAuth_BaseTest{
 
 
         // using LOCATION Header which we above extracted sending GET request
-        get(locationHeader).prettyPeek();
+       //  get(locationHeader).prettyPeek();
 
 
 
