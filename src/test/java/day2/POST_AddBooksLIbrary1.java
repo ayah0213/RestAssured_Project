@@ -79,6 +79,8 @@ public class POST_AddBooksLIbrary1 extends Lib1TestBase {
                 .then()
                 .log().body()
                 .statusCode(200)
+        .body("id",is(newBookId+"" )) // verify that id is String
+        .body("name" ,is(newBook.get("name"))) // verify that name is String
                 ;
 
 

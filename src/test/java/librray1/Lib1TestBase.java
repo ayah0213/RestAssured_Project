@@ -11,30 +11,6 @@ public class Lib1TestBase {
 
 public static  String token;
 
-//    @BeforeAll
-//    public static void init(){
-//        baseURI  = ConfigurationReader.getProperty("lib1URL");
-//        basePath = ConfigurationReader.getProperty("lib1endPoint");
-//    }
-//
-//
-//    public static String getToken(String username, String password){
-//
-//
-//
-//        return given()
-//                .contentType(ContentType.URLENC)
-//                .formParam("email", username)
-//                .formParam("password", password)
-//                .when()
-//                .post("/login")
-//               .then()
-//                .extract()
-//                .path("token");
-//
-//    }
-
-
     public static String librarianToken;
 
     @BeforeAll
