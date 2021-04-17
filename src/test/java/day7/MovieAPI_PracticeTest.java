@@ -12,7 +12,7 @@ import static io.restassured.RestAssured.* ;
 import static org.hamcrest.Matchers.* ;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class MovieAPI_PracticeTest_ERROR {
+public class MovieAPI_PracticeTest {
     // save the result of your request
     // SEND GET http://www.omdbapi.com/?t=Avenger&apikey=YOUR OWN API KEY goes here
     // save the response into Movie POJO , title Str, year int , Released str ,Language
