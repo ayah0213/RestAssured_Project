@@ -80,6 +80,7 @@ public class MovieAPI_Practice  {
        .body("Search.Title", hasItem("Superman and Lois"))
        .body("Search.Title", hasItems("Superman and Lois","The New Adventures of Superman"))
         .body("Search.Title",everyItem(containsString("Superman")) )
+
                 ;
 
 
