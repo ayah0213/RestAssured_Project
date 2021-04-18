@@ -3,7 +3,7 @@ package day3;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
-import test_util.SpartanNoAuth_BaseTest;
+import spartan_util.SpartanNoAuth_BaseTest;
 
 import org.junit.jupiter.api.*;
 
@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 
 import static io.restassured.RestAssured.* ;
-import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.* ;
 import static org.hamcrest.MatcherAssert.assertThat;
 

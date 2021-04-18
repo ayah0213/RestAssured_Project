@@ -3,15 +3,13 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.*;
+
 import static io.restassured.RestAssured.* ;
-import static org.hamcrest.Matchers.* ;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 
-import org.junit.jupiter.api.DisplayName;
 import pojo.SpartanPOJO;
-import test_util.SpartanNoAuth_BaseTest;
+import spartan_util.SpartanNoAuth_BaseTest;
 
 import java.util.List;
 

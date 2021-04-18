@@ -1,11 +1,10 @@
 package day2;
 
 import io.restassured.response.Response;
-import test_util.SpartanNoAuth_BaseTest;
+import spartan_util.SpartanNoAuth_BaseTest;
 
 import org.junit.jupiter.api.*;
 import static io.restassured.RestAssured.* ;
-import static io.restassured.matcher.RestAssuredMatchers.*;
 import static org.hamcrest.Matchers.* ;
 import static org.hamcrest.MatcherAssert.assertThat;
 
